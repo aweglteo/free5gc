@@ -52,7 +52,7 @@ $(C_NF): % :
 	rm -rf $(C_BUILD_PATH) && \
 	mkdir -p $(C_BUILD_PATH) && \
 	cd ./$(C_BUILD_PATH) && \
-	cmake .. && \
+	cmake -DCMAKE_BUILD_TYPE=Debug .. && \
 	make -j$(nproc)
 
 $(WEBCONSOLE): $(WEBCONSOLE)/$(GO_BIN_PATH)/$(WEBCONSOLE)
